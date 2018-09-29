@@ -1,0 +1,42 @@
+{% extends 'base_layout.html'%}
+
+{%block content%}
+<div class="assignment_detail">
+  <div class="assignment">
+    <table cellpadding="5">
+      <col width = "300">
+      <col width = "3000">
+      <tr>
+        <td>Subject</td>
+        <td> <h2>{{assignment.subject}}</h2> </td>
+      </tr>
+      <tr>
+        <td>Assignment Title:</td>
+        <td>{{ assignment.title }}</td>
+      </tr>
+      <tr>
+        <td>Assignment Number:</td>
+        <td>{{assignment.ass_no}}</td>
+      </tr>
+      <tr>
+        <td>Body:</td>
+        <td>{{assignment.body}}</td>
+      </tr>
+      <tr>
+        <td>Upload Date:</td>
+        <td>{{assignment.date}}</td>
+      </tr>
+      <tr>
+        <td>Submit Date:</td>
+        <td>{{assignment.submit}}</td>
+      </tr>
+      <tr>
+        <td>Document:</td>
+        <td><a href={{assignment.document.url}}>Click to Download</a></td>
+
+      </tr>
+    </table>
+  </div>
+</div>
+
+{%endblock%}

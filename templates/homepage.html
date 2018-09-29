@@ -1,0 +1,11 @@
+{% extends 'base_layout.html'%}
+{% load static from staticfiles %}
+
+{%block content%}
+
+  <div class="subjects" align = "center">
+    <h1>Welcome to PCCOE assignment portal</h1>
+    <h3>Here you can view all assignments and lab manuals</h3>
+    <h3> <a href="{% url 'list' %}">Click to access</a></h3>
+  </div>
+    {%endblock%}

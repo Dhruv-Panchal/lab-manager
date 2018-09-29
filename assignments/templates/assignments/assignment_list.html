@@ -1,0 +1,51 @@
+{% extends 'base_layout.html'%}
+
+{%block content%}
+
+ <style>
+ table, th, td {
+  border: 1px white;
+  border-collapse: collapse;
+}
+ </style>
+
+  <h1>Assignment list</h1>
+  <div class="assignments">
+    {%for assignment in assignments%}
+
+      <div class="assignment">
+      <table cellpadding="5">
+        <col width = "300">
+        <col width = "300">
+        <tr>
+          <td>Subject</td>
+          <td> <h2>{{assignment.subject}}</h2> </td>
+        </tr>
+        <tr>
+          <td>Assignment Title:</td>
+          <td> <a href="{{assignment.slug}}">{{ assignment.title }}</a></td>
+        </tr>
+        <tr>
+          <td>Assignment Number:</td>
+          <td>{{assignment.ass_no}}</td>
+        </tr>
+        <tr>
+          <td>Snippet:</td>
+          <td>{{assignment.snippet}}</td>
+        </tr>
+        <tr>
+          <td>Upload Date:</td>
+          <td>{{assignment.date}}</td>
+        </tr>
+        <tr>
+          <td>Submit Date:</td>
+          <td>{{assignment.submit}}</td>
+        </tr>
+      </table>
+      </div>
+
+    {% endfor %}
+  </div>
+
+
+{%endblock%}
